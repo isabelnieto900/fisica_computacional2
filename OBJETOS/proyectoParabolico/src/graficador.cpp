@@ -12,9 +12,9 @@ void graficarDatos() {
     std::transform(opcion.begin(), opcion.end(), opcion.begin(), ::tolower);
 
     if (opcion == "gnuplot") {
-        system("gnuplot -persist scripts/plot_parabolico.gp");
+        (void)system("gnuplot -persist scripts/plot_parabolico.gp");
     } else if (opcion == "python") {
-        system("python3 scripts/plot_parabolico.py");
+        (void)system("python3 scripts/plot_parabolico.py");
     } else {
         std::cout << "❌ Opción no reconocida. Escriba 'gnuplot' o 'python'.\n";
     }
